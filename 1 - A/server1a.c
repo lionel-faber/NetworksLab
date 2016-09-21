@@ -1,9 +1,9 @@
-#include < stdio.h >
-#include < sys / types.h >
-#include < netinet / in .h >
-#include < string.h >
-#include < sys / socket.h >
-  main() {
+#include <stdio.h>
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <string.h>
+#include <sys/socket.h>
+void  main() {
     int x, a, bd, sd, newsd, port, clilen, i;
     char lost[20], sendmsg[20], recvmsg[20];
     struct sockaddr_in servaddr, cliaddr;
