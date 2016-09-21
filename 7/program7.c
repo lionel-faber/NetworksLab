@@ -1,6 +1,6 @@
-#include <arpa/inet.h> 
+#include <arpa/inet.h>
 #include <stdio.h>
-  int main(int argc, char * * argv) {
+int main(int argc, char * * argv) {
     char * host_ip = argc > 1 ? argv[1] : "127.0.0.1";
     char * netmask = argc > 2 ? argv[2] : "255.255.0.255";
     struct in_addr host, mask, broadcast;
@@ -19,3 +19,4 @@
       return 1;
     }
     return 0;
+}
