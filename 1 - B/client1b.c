@@ -8,11 +8,11 @@
 #include <stdlib.h>
 # define MAX 100
 # define PORT 7386
-int main(int argc, char * argv[]) {
+int main(int argc, char *argv[]) {
   int ct, sockfd;
   int sfd, slen, clen, bufsize;
   char buff[MAX];
-  FILE * fp;
+  FILE *fp;
   struct sockaddr_in serv, cliaddr;
   sockfd = socket(AF_INET, SOCK_STREAM, 0);
   if (sockfd < 1) {
@@ -20,11 +20,11 @@ int main(int argc, char * argv[]) {
     exit(0);
   }
   printf("CLIENT SOCKED CREATED");
-  bzero( & serv, sizeof(serv));
+  bzero( &serv, sizeof(serv));
   serv.sin_family = AF_INET;
   serv.sin_port = htons(PORT);
   serv.sin_addr.s_addr = inet_addr(argv[1]);
-  if (connect(sockfd, (struct sockaddr * ) & serv, sizeof(serv)) < 0) {
+  if (connect(sockfd, (struct sockaddr * ) &serv, sizeof(serv)) < 0) {
     printf("ERROR IN CONNECT");
     exit(1);
   }
